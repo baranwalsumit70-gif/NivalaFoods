@@ -464,11 +464,16 @@
     <h1 style="font-family: 'Playfair Display',serif; font-weight: 500; font-size: clamp(36px,4.4vw,58px); line-height: 1.08; color: #554D2B; margin: 0 0 20px; max-width: 760px; text-wrap: balance">We Know Where Our Rice Begins.</h1>
     <p style="font-size:17px;line-height:1.7;color:#4A4145;margin:0 0 48px;max-width:600px">Every batch carries its region, variety, harvest season and processing location. Know your rice. Know where it comes from.</p>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:20px;margin-bottom:96px">
-      <sc-for list="{{ farmGallery }}" as="f" hint-placeholder-count="4">
-        <div style="aspect-ratio:3/4;border-radius:16px;overflow:hidden;border:1px solid #E8DFCE;background:#F8F3E9">
-          <image-slot id="{{ f.slotId }}" shape="rect" placeholder="{{ f.hint }}"></image-slot>
-        </div>
-      </sc-for>
+   <sc-for list="{{ farmGallery }}" as="f" hint-placeholder-count="4">
+  <div style="aspect-ratio:3/4;border-radius:16px;overflow:hidden;border:1px solid #E8DFCE;background:#F8F3E9">
+    <img
+      src="{{ f.img }}"
+      alt="{{ f.alt }}"
+      loading="lazy"
+      style="width:100%;height:100%;object-fit:cover;display:block"
+    >
+  </div>
+</sc-for>
     </div>
   </section>
   <section style="background:#F8F3E9;border-top:1px solid #E8DFCE;border-bottom:1px solid #E8DFCE">
