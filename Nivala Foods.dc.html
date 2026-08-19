@@ -1022,12 +1022,28 @@ class Component extends DCLogic {
         { n:"04", title:"Pack", alt:"Sealed Nivala rice packs on the packing line", body:"Packed hygienically to preserve freshness.", slotId:"nv-j4", farmSlotId:"nv-fj4", img:this.img("nv-j4"), farmImg:this.img("nv-j4"), hasImg:!!this.img("nv-j4"), noImg:!this.img("nv-j4"), slotHint:"Sealed rice packs on line" },
         { n:"05", title:"Deliver", alt:"Nivala pack arriving at a home kitchen", body:"Delivered from Nivala Foods to your kitchen.", slotId:"nv-j5", farmSlotId:"nv-fj5", img:this.img("nv-j5"), farmImg:this.img("nv-j5"), hasImg:!!this.img("nv-j5"), noImg:!this.img("nv-j5"), slotHint:"Pack arriving at a home kitchen" }
       ],
-      farmGallery: [
-        { slotId:"nv-farm1", hint:"Paddy field at sunrise" },
-        { slotId:"nv-farm2", hint:"Farmer inspecting grain heads" },
-        { slotId:"nv-farm3", hint:"Harvest in progress" },
-        { slotId:"nv-farm4", hint:"Grain drying in the yard" }
-      ],
+farmGallery: [
+  {
+    img: "assets/11.png",
+    alt: "Paddy field at sunrise",
+    hint: "Paddy field at sunrise"
+  },
+  {
+    img: "assets/21.png",
+    alt: "Farmer inspecting grain heads",
+    hint: "Farmer inspecting grain heads"
+  },
+  {
+    img: "assets/31.png",
+    alt: "Harvest in progress",
+    hint: "Harvest in progress"
+  },
+  {
+    img: "assets/41.png",
+    alt: "Grain drying in the yard",
+    hint: "Grain drying in the yard"
+  }
+],
       traceHead: ["Variety","Region","Harvest season","Processing","Batch"],
       traceRows: P.map(p => ({ cells: [p.name, p.region, "Rabi 2025–26", "Nivala mill, Siddharthnagar", "NVL-" + p.id.slice(0,3).toUpperCase() + "-2604"] })),
 
